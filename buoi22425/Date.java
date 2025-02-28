@@ -14,6 +14,11 @@ public class Date {
 		thang = month;
 		nam = year;
 	}
+	public Date(Date s) {
+		ngay = s.ngay;
+		thang = s.thang;
+		nam = s.nam;
+	}
 	public boolean hopLe() {
 		int max[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		if(nam % 400 == 0 || (nam % 4 == 0 && nam % 100 != 0)) {
@@ -61,5 +66,8 @@ public class Date {
 			d = d.ngayHomSau();
 		}
 		return d;
+	}
+	public String toString() {
+		return ngay + "/" + thang + "/" + nam;
 	}
 }

@@ -2,6 +2,8 @@ package buoi22425;
 
 import java.util.Scanner;
 
+import Buoi2.Diem;
+
 public class Diem {
 	private int x, y;
 	public Diem() {
@@ -11,6 +13,10 @@ public class Diem {
 	public Diem(int x1, int y1) {
 		x = x1;
 		y = y1;
+	}
+	public Diem(Diem d) {
+		x = d.x;
+		y = d.y;
 	}
 	public void nhapDiem() {
 		Scanner sc = new Scanner(System.in);
