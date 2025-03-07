@@ -21,6 +21,18 @@ public class SinhVien {
 			diemhp[i] = new String();
 		}
 	}
+	public SinhVien(String m, String h, Date n) {
+		mssv = new String(m);
+		hoten = new String(h);
+		ngaysinh = new Date(n);
+		soluonghp = 1;
+		tenhp = new String[20];
+		diemhp = new String[20];
+		for(int i = 0; i < 20; i++) {
+			tenhp[i] = new String();
+			diemhp[i] = new String();
+		}
+	}
 	public SinhVien(SinhVien s){
 		mssv	= new String(s.mssv);
 		hoten	= new String(s.hoten);
@@ -60,7 +72,7 @@ public class SinhVien {
 		kq += "Ngay sinh: " + ngaysinh.toString() + "\n";
 		kq += "So luong hoc phan dang ky: " + soluonghp + "\n";
 		for(int i = 0; i < soluonghp; i++) {
-			kq += "Diem cua hoc phan" + tenhp[i] + " la: " + diemhp[i] + "\n";
+			kq += "Diem cua hoc phan " + tenhp[i] + " la: " + diemhp[i] + "\n";
 		}
 		return kq;
 	}

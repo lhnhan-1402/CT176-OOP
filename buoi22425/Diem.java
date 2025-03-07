@@ -28,6 +28,9 @@ public class Diem {
 	public void hienThi() {
 		System.out.println("(" + x + "," + y + ")");
 	}
+	public String toString() {
+		return ("(" + x + "," + y + ")");
+	}
 	public void doiDiem(int dx, int dy) {
 		x += dx;
 		y += dy;
